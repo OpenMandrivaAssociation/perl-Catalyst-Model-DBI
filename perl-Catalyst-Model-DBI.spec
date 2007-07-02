@@ -2,10 +2,10 @@
 %define name	perl-%{module}
 %define	modprefix Catalyst
 
-%define version 0.15
+%define version 0.19
 
 %define	rel	1
-%define release %mkrel %{rel}
+%define release %mkrel 1
 
 Summary:	Catalyst DBI Model Class
 Name:		%{name}
