@@ -21,7 +21,6 @@ BuildRequires:	perl-devel >= 5.8.1
 BuildRequires:	perl(Catalyst) >= 5.0
 BuildRequires:	perl(DBI)
 BuildArch:	noarch
-Buildroot:	%{_tmppath}/%{name}-root
 
 %description
 This is the DBI model class for Catalyst. It is nothing more than a
