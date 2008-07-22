@@ -5,7 +5,7 @@
 %define version 0.19
 
 %define	rel	1
-%define release %mkrel 1
+%define release %mkrel 3
 
 Summary:	Catalyst DBI Model Class
 Name:		%{name}
