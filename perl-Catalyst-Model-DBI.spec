@@ -1,34 +1,30 @@
-%define	module	Catalyst-Model-DBI
-%define name	perl-%{module}
-%define	modprefix Catalyst
+%define	upstream_name	 Catalyst-Model-DBI
+%define upstream_version 0.20
 
-%define version 0.20
-
-%define	rel	1
-%define release %mkrel 3
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 
 Summary:	Catalyst DBI Model Class
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
 License:	Artistic/GPL
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{module}/
-Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module/%{modprefix}/%{module}-%{version}.tar.gz
+Url:		http://search.cpan.org/dist/%{upstream_name}/
+Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Catalyst/%{upstream_name}-%{upstream_version}.tar.gz
+
 %if %{mdkversion} < 1010
 BuildRequires:	perl-devel >= 5.8.1
 %endif
 BuildRequires:	perl(Catalyst) >= 5.0
 BuildRequires:	perl(DBI)
 BuildArch:	noarch
-Buildroot:	%{_tmppath}/%{name}-root
+Buildroot:	%{_tmppath}/%{name}-{version}-%{release}
 
 %description
 This is the DBI model class for Catalyst. It is nothing more than a
 simple wrapper for DBI.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %__perl Makefile.PL INSTALLDIRS=vendor
@@ -41,13 +37,11 @@ simple wrapper for DBI.
 rm -rf %{buildroot}
 %makeinstall_std
 
-%files
-%defattr(-,root,root)
-%doc README Changes
-%{perl_vendorlib}/%{modprefix}
-%{_mandir}/*/*
-
 %clean
 rm -rf %{buildroot}
 
-
+%files
+%defattr(-,root,root)
+%doc README Changes
+%{perl_vendorlib}/Catalyst
+%{_mandir}/*/*
