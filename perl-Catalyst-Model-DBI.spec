@@ -15,9 +15,11 @@ Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Catalyst/%{upstream_name}
 BuildRequires:	perl-devel >= 5.8.1
 %endif
 BuildRequires:	perl(Catalyst) >= 5.0
+BuildRequires:	perl(Class::C3)
 BuildRequires:	perl(DBI)
+
 BuildArch:	noarch
-Buildroot:	%{_tmppath}/%{name}-{version}-%{release}
+Buildroot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This is the DBI model class for Catalyst. It is nothing more than a
