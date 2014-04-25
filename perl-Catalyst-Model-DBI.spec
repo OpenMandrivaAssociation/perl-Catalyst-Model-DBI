@@ -13,6 +13,7 @@ Url:		http://search.cpan.org/dist/%{upstream_name}/
 Source0:	ftp://ftp.perl.org:21/pub/CPAN/modules/by-module/Catalyst/%{upstream_name}-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
+BuildRequires: perl(DBIx::Connector)
 BuildRequires:	perl(Catalyst) >= 5.0
 BuildRequires:	perl(Class::C3)
 BuildRequires:	perl(DBI)
