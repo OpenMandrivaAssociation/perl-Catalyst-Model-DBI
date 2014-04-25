@@ -1,2 +1,4 @@
+removed_sources:
+  Catalyst-Model-DBI-0.28.tar.gz: 4ebb8a8443640f4a1efb0f1d0dd6becab08f0fc3
 sources:
-  "Catalyst-Model-DBI-0.28.tar.gz": 4ebb8a8443640f4a1efb0f1d0dd6becab08f0fc3
+  Catalyst-Model-DBI-0.32.tar.gz: 948182c6f9515ca7ffc2b05ba109709b4ef393da
