@@ -1,15 +1,13 @@
 %define	upstream_name	 Catalyst-Model-DBI
-%define upstream_version 0.32
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	0.32
+Release:	2
 
 Summary:	Catalyst DBI Model Class
 License:	Artistic/GPL
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/Catalyst-Model-DBI
-Source0:	https://cpan.metacpan.org/authors/id/A/AL/ALEXP/Catalyst-Model-DBI-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/A/AL/ALEXP/Catalyst-Model-DBI-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -24,7 +22,7 @@ This is the DBI model class for Catalyst. It is nothing more than a
 simple wrapper for DBI.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -62,9 +60,7 @@ make test
 
 * Tue Aug 04 2009 Jérôme Quelin <jquelin@mandriva.org> 0.200.0-1mdv2010.0
 + Revision: 408939
-- rebuild using %%perl_convert_version
-
-* Sun Dec 14 2008 Guillaume Rousse <guillomovitch@mandriva.org> 0.20-3mdv2009.1
+- rebuild using %0.32 Sun Dec 14 2008 Guillaume Rousse <guillomovitch@mandriva.org> 0.20-3mdv2009.1
 + Revision: 314241
 - update to new version 0.20
 
